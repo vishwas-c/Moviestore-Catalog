@@ -26,11 +26,11 @@ An application that provides a list of movies within a variety of genres as well
 
 # Screenshots of the working application
 
-<img src="pics/Homepage.png" width="800"/>
+<img src="pics/Homepage.PNG" width="800"/>
 
-<img src="pics/genre.png" width="800">
-![genre](https://github.com/vishwas-c/Moviestore-Catalog/blob/master/pics/Homepage.PNG)
-<img src="pics/edit.png" width="800">
+<img src="pics/genre.PNG" width="800">
+
+<img src="pics/edit.PNG" width="800">
 
 # Known Issues
 - Facebook login not working on localhost as Facebook has made it mandatory for url origin to be https://.
