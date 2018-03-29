@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	  
+	  <div class="navbar-header">
+				<a class="navbar-brand" href="{{ url_for('showGenres') }}"><span style="color:white">Movie Store</span></a>
+	  </div>
+	 
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+			{%if 'username' not in session %}
+			<button class="btn btn-success">
+				<li><a href="{{url_for('showLogin')}}"><span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
+				</button>
+		  {% else %}
+			{% if session.user_id %}
+				 <button class="btn btn-success">
+				  <li><a href="{{url_for('disconnect')}}"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+				</button>
+			{% endif %}
+		  {% endif %} 
+			</ul>
+	  </div>
+	</div>
+  </nav>

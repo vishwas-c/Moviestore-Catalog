@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "genre_panel.html" %}
+
+	<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12">
+					{% if quantity != 1 %}
+					<h2>{{ genre.name }} genre ({{ quantity }} movies)
+					{% else %}
+					<h2>{{ genre.name }} genre ({{ quantity }} movies)
+					{% endif %}
+					{% if session.user_id %}
+					<div class="pull-right">
+						<a href = "{{ url_for('newMovie') }}">
+							<button class="btn btn-info">
+								<span class="glyphicon glyphicon-film" aria-hidden="true"></span> 
+									Add Movie
+							</button>
+						</a>
+					</div>
+					{% endif %}
+					</h2>
+				</div>
+			</div>
+			{% include "genre_list.html" %}
+		</div>
+{% endblock %}

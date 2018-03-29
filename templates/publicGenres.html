@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "genre_panel.html" %}
+<div class="col-md-8">
+	<div class="row">
+		<div class="col-md-10">
+			<h2>Latest Items</h2>
+		</div>
+	</div>
+	{% include "genre_list.html" %}
+</div>
+
+{% endblock %}
+

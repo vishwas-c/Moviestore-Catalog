@@ -1,0 +1,62 @@
+body {
+	background-color: rgb(156, 240, 252); 
+}
+
+nav {
+	margin: 0;
+	width: 100%;
+}
+
+a {
+	color: black;
+}
+
+ul {
+	padding-left: 0;
+}
+
+h3 {
+	margin-top: 0px;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  min-height: 100px;
+  margin: 0 1rem 2rem 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.img-thumbnail {
+	margin-top: 1rem;
+}
+
+.name {
+	padding: 0;
+}
+
+.editdeletepane {
+	padding-bottom: 1rem;
+}
+
+.item-description {
+	padding: 0 1rem;
+}
+
+.item-info-card {
+	padding: 1rem;
+}
+
+.detail-card {
+	margin: 0;
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+	font-size: 3rem;
+}

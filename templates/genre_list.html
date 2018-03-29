@@ -1,0 +1,27 @@
+<ul class="list-group">
+        {% if quantity and items > 0 %}
+            {% for i in items %}
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-12">
+                            <span class="name">
+                            <a href="{{ url_for('showMovieItem', genre_id=i.genre_id, movies_name_id=i.id) }}" >
+                                <h3>{{i.name}}</a>&nbsp;&nbsp;<small>({{ i.genre.name }})</small> 
+                            </h3>
+                        </span>
+                        {% if creator %}
+                        <div>
+                            Made By:  {{ creator.email }}
+                        {% endif %}		
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        {% else %}
+        <ul>
+            <li class="list-group-item">
+                You currently have no movies list.
+            </li>
+        </ul>
+        {% endif %}
+    </ul>
