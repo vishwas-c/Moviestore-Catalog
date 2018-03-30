@@ -301,11 +301,11 @@ def newGenres():
 
 @app.route('/genres/<int:genre_id>/edit/', methods=['GET', 'POST'])
 def editGenres(genre_id):
+    if 'username' not in login_session:
+        return redirect('/login')
     """Allows user to edit an existing genre"""
     editedGenres = session.query(
         Movies_Genre).filter_by(id=genre_id).one()
-    if 'username' not in login_session:
-        return redirect('/login')
     if editedGenres.user_id != login_session['user_id']:
         return "<script>function myFunction() {alert('You are not authorized to edit this Genre. Please create your own Genre in order to edit.');}</script><body onload='myFunction()'>"
     if request.method == 'POST':
@@ -320,11 +320,11 @@ def editGenres(genre_id):
 # Delete a genre
 @app.route('/genres/<int:genre_id>/delete/', methods=['GET', 'POST'])
 def deleteGenres(genre_id):
-    """USers can delete an existing genre"""
-    genreToDelete = session.query(
-        Movies_Genre).filter_by(id=genre_id).one()
     if 'username' not in login_session:
         return redirect('/login')
+    """Users can delete an existing genre"""
+    genreToDelete = session.query(
+        Movies_Genre).filter_by(id=genre_id).one()
     if genreToDelete.user_id != login_session['user_id']:
         return "<script>function myFunction() {alert('You are not authorized to delete this Genre. Please create your own Genre in order to delete.');}</script><body onload='myFunction()'>"
     if request.method == 'POST':
